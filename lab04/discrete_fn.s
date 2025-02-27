@@ -77,7 +77,10 @@ main:
 # Think: why might having a1 be useful?
 f:
     # YOUR CODE GOES HERE!
-
+    addi t0, a0, 3
+    slli t1, t0, 2 ## the offset of address
+    add t2, a1, t1
+    lw a0, 0(t2)
     jr ra               # Always remember to jr ra after your function!
 
 print_int:

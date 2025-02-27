@@ -1,0 +1,8 @@
+Mistake
+1:# load the address of the array of current node into t1
+应该使用lw而不是简单的add
+2: # offset the array address by the count 这里的offset应该左移动2位
+3:# call the function on that value 缺少目标寄存器
+4:# load the address of the next node into a0 不应该使用la
+5:# put the address of the function back into a1 to prepare for the recursion
+应该使用add而不是lw,我们要的是函数的地址而不是函数的具体内容
